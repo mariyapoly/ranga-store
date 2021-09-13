@@ -87,14 +87,21 @@ const updateTaxAndCharge = () => {
   }
 };
 
-//grandTotal update function
+// update total function
 const updateTotal = () => {
   const grandTotal =
     getInputValue("price") + getInputValue("delivery-charge") +
     getInputValue("total-tax");
   document.getElementById("total").innerText = (Math.round(grandTotal * 100) / 100).toFixed(2);
 };
-
+// clear data in UI
+const productBuy = () => {
+  document.getElementById("total-Products").innerText = 0;
+  document.getElementById("price").innerText = 0;
+  document.getElementById("delivery-charge").innerText = 20;
+  document.getElementById("total-tax").innerText = 0;
+  document.getElementById("total").innerText = 0;
+}
 // product details data load function
 const productDetails = (id) => {
   const url = `https://fakestoreapi.com/products/${id}`;
