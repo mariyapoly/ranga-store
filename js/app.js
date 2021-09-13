@@ -105,7 +105,6 @@ const productDetails = (id) => {
 
 // display product details function
 const productDetailsShow = (item) => {
-  console.log(item)
   const productDetails = document.getElementById('product-details');
   productDetails.innerHTML = `
     <div class="modal-content">
